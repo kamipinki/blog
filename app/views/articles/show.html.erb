@@ -1,10 +1,12 @@
 <p>
-<h4> Detalle Articulos</h4>
-  <strong>Title:</strong>
-  <%= @articles.title %>
+<h4> Detalle Articulos<h4>
+
+  <strong>title:</strong>
+  <%= @article.title %>
 </p>
  
 <p>
   <strong>Text:</strong>
-  <%= @articles.text %>
+  <%= @article.text %>
 </p>
+<%= link_to 'Volver a lista de articulos ' , articles_path %>
