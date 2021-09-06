@@ -1,7 +1,5 @@
 <p>
-<h4> Detalle Articulos<h4>
-
-  <strong>title:</strong>
+  <strong>Title:</strong>
   <%= @article.title %>
 </p>
  
@@ -9,6 +7,13 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
-<%= link_to 'Volver a lista de articulos ' , articles_path %>
+ 
+<h2>Comments</h2>
+<%= render @article.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+</p>
+<%= link_to 'Volver a lista de articulos ' , articles_path %> |
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
