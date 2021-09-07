@@ -1,14 +1,15 @@
-<h1>listando articulos </h1>
+<h1 class= "text-secondary"> Listando articulos </h1>
  <table border="1">
-
-  <tr>
-  <th>ID</th>
-    <th>Title</th>
-    <th>Text</th>
-    <th>Actions</th>
-    <th>Edit</th>
-  </tr>
- <% @articles.each do |article| %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <% @articles.each do |article| %>
     <tr>
     <td><%= article.id %></td>
       <td><%= article.title %></td>
@@ -20,5 +21,5 @@
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-</table>
-<%= link_to 'ingresar un articulo ' , new_article_path %>
+  </table>
+<%= link_to 'Ingresar un articulo ' , new_article_path %>
