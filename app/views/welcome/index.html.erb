@@ -1,4 +1,43 @@
 <h1>bienvenido <%= @nombre %> </h1>
-<p>Esta es mi super blog </p>
-<%= link_to 'ingresar a mi blog' , articles_path %>
+<%= link_to 'Listado de articulos' , articles_path %>
 
+
+<body>
+<div class="jumbotron text-center">
+<%= image_tag('banner web 2 desaturno-01.jpg', width: '1100px', height: '400px', class: 'rounded') %>
+  <div class="alert alert-info">
+    <strong> Despacho gratis por compras sobre $30.000</strong>
+  
+   
+   <h1 class="display-1">Accesorios deSaturno</h1>
+  <p>Accesorios espaciales con galaxias y mucho más!</p> 
+</div>
+
+  <div class="container">
+      <center><h1>Eventos</h1></center>
+  <div class="row">
+    <div class="col-sm-4">
+    <%= image_tag('evento1.jpg', width: '350px', height: '500px', class: 'rounded') %>
+      <h3>Mall plaza Calama</h3>
+      <p>Nuestro primer evento en Calama, Son las mejores!</p>
+    </div>
+    <div class="col-sm-4">
+    <%= image_tag('evento2.jpg', width: '350px', height: '500px', class: 'rounded') %>
+      <h3>Mall plaza Egaña</h3>
+      <p> Nuestra tienda express en santiago <3</p>
+      
+    </div>
+    <div class="col-sm-4">
+    <%= image_tag('evento3.jpg', width: '350px', height: '500px', class: 'rounded') %>
+      <h3>Mall plaza Antofagasta</h3>        
+      <p>Nuestra tiendita en Antofagasta</p>
+      
+    </div>
+  </div>
+</div>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>deSaturno.cl</p>
+</div>
+
+</body>
+</html>
