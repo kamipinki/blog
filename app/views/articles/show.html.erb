@@ -1,11 +1,11 @@
-<h2>Detalles del Articulo</h2>
-<%= image_tag ('Aritos1.jpg') %>
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+ <p><h3>Detalles del articulo</h3></p>
+
+  <%= image_tag('aritos1.jpg', width: '150px', height: '200px', class: 'rounded') %>
+
+  <p><strong>Titulo:</strong></p>
+  <p><%= @article.title %></p>
  
-<p>
+  <p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
