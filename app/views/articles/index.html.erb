@@ -40,6 +40,7 @@
             <button type="button" class="btn btn-secondary">Editar</button>
             <button type="button" class="btn btn-primary">Eliminar</button>
   <h5 class="card-litle"><%= article.title%></h5>
+  </div>
   <div class="card-body">
   <h5 class="card-text"><%= article.text%></h5>
       <td><%= link_to('show', article_path(article)) %></td>
@@ -48,6 +49,7 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
+    </div>
   <% end %>
   </table>
   <div class="container">
