@@ -1,16 +1,14 @@
  <p><h3>Detalles del articulo</h3></p>
 
-  <% if @article.photo.attached? %>
-    <%= image_tag(url_for(@article.photo), width: 150, height: 200) %>
-  <% end %>
+ 
 
   <p><strong>Titulo:</strong></p>
   <p><%= @article.title %></p>
  
-      <p>
+  <p>
   <strong>Text:</strong>
   <%= @article.text %>
-    </p>
+  </p>
  
 <h2>Comments</h2>
 <%= render @article.comments %>
