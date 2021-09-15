@@ -1,21 +1,21 @@
- <p><h3>Detalles del articulo</h3></p>
+  
+<h3>Detalle del articulo</h3>
 
- 
+<%#= image_tag('office.jpg', width: '150px', height: '150px', class: 'rounded', alt: 'office') %>
+<%# Alojar las images dentro de app/assets/images/  %>
+<% if @article.photo.attached? %>
+  <%= cl_image_tag(url_for(@article.photo), width: 300, height: 300) %>
+<% end %>
+<p><strong>Titulo</strong></p>
+<p><%= @article.title %></p>
 
-  <p><strong>Titulo:</strong></p>
-  <p><%= @article.title %></p>
- 
-  <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-  </p>
- 
-<h2>Comments</h2>
+<p><strong>Texto</strong></p>
+<p><%= @article.text %></p>
+
+<h2>Commentarios</h2>
+
 <%= render @article.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
-<%= link_to 'Volver a lista de articulos ' , articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<h2>Agregar un comentario:</h2>
+<%= render 'comments/form' %>
+<%= link_to "Volver al listado de articulos",  articles_path %>
