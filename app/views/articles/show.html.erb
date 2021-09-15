@@ -1,7 +1,7 @@
  <p><h3>Detalles del articulo</h3></p>
 
   <% if @article.photo.attached? %>
-    <%= image_tag(url_for(@article.photo), width: 150, height: 200) %>
+    <%= cl_image_tag(url_for(@article.photo), width: 150, height: 200) %>
   <% end %>
 
   <p><strong>Titulo:</strong></p>
