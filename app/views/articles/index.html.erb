@@ -2,8 +2,6 @@
 
  <table border="1">
 <table class="table table-dark table-hover">
-<div class="alert alert-info">
-<strong> Despacho gratis por compras sobre $30.000</strong>
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -13,49 +11,19 @@
     </tr>
 
   <% @articles.each do |article| %>
-        
-        <div class="container">
-      
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Aritos 8mm </h3>
-      <p> $3.500 </p>
-            <button type="button" class="btn btn-primary">Mostrar</button>
-            <button type="button" class="btn btn-secondary">Editar</button>
-            <button type="button" class="btn btn-primary">Eliminar</button>
-    </div>
-    <div class="col-sm-4">
-      <h3>Aritos personalizados</h3>
-      <p> $3.500 </p>
-            <button type="button" class="btn btn-primary">Mostrar</button>
-            <button type="button" class="btn btn-secondary">Editar</button>
-            <button type="button" class="btn btn-primary">Eliminar</button>
-      
-    </div>
-    <div class="col-sm-4">
-  
-      <h3> Aros resina </h3>
-      <p> $3.500 </p>        
-            <button type="button" class="btn btn-primary">Mostrar</button>
-            <button type="button" class="btn btn-secondary">Editar</button>
-            <button type="button" class="btn btn-primary">Eliminar</button>
-  <h5 class="card-litle"><%= article.title%></h5>
-  </div>
-  <div class="card-body">
-  <h5 class="card-text"><%= article.text%></h5>
+    <tr>
+    <td><%= article.title %></td>
+    <td><%= article.text %></td>
       <td><%= link_to('show', article_path(article)) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
-    </div>
   <% end %>
   </table>
   <div class="container">
-  
-  
-</div>
+    </div>
 
 <%= link_to 'Ingresar un articulo ' , new_article_path, class:'btn btn-primary' %>
 
