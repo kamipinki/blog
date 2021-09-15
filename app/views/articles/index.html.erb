@@ -14,7 +14,7 @@
 
   <% @articles.each do |article| %>
     <% if article.photo.attached? %>
-          <%= cl_image_tag(url_for(article.photo), width: 150, height: 200) %>
+          <%#= cl_image_tag(url_for(article.photo), width: 150, height: 200) %>
         <% end %>
         <div class="container">
       
