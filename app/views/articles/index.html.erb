@@ -11,12 +11,41 @@
       <th scope="col">Detalle</th>
       <th scope="col">Acciones</th>
     </tr>
-  </thead>
+
   <% @articles.each do |article| %>
-    <tr>
-    <td><%= article.id %></td>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
+    <% if article.photo.attached? %>
+          <%= image_tag(url_for(article.photo), width: 150, height: 200) %>
+        <% end %>
+        <div class="container">
+      
+  <div class="row">
+    <div class="col-sm-4">
+       <img src="Collares personalizados"width="250" height="250">
+      <h3>Aritos 8mm </h3>
+      <p> $3.500 </p>
+            <button type="button" class="btn btn-primary">Mostrar</button>
+            <button type="button" class="btn btn-secondary">Editar</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="aritos2.jpg"width="250" height="250">
+      <h3>Aritos personalizados</h3>
+      <p> $3.500 </p>
+            <button type="button" class="btn btn-primary">Mostrar</button>
+            <button type="button" class="btn btn-secondary">Editar</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+      
+    </div>
+    <div class="col-sm-4">
+      <img src="aritos3.jpg"width="250" height="250">
+      <h3> Aros resina </h3>
+      <p> $3.500 </p>        
+            <button type="button" class="btn btn-primary">Mostrar</button>
+            <button type="button" class="btn btn-secondary">Editar</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+  <h5 class="card-litle"><%= article.title%></h5>
+  <div class="card-body">
+  <h5 class="card-text"><%= article.text%></h5>
       <td><%= link_to('show', article_path(article)) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy', article_path(article),

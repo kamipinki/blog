@@ -1,6 +1,8 @@
  <p><h3>Detalles del articulo</h3></p>
 
-  <%= image_tag('aritos1.jpg', width: '150px', height: '200px', class: 'rounded') %>
+  <% if @article.photo.attached? %>
+    <%= image_tag(url_for(@article.photo), width: 150, height: 200) %>
+  <% end %>
 
   <p><strong>Titulo:</strong></p>
   <p><%= @article.title %></p>

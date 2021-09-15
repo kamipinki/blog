@@ -45,6 +45,6 @@ before_action :find_article, only:[:show,:edit, :update, :destroy]
         @article = Article.find(params[:id])
       end
         def article_params
-          params.require(:article).permit(:title, :text)
+          params.require(:article).permit(:title, :text, :photo)
         end
 end
