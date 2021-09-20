@@ -1,5 +1,8 @@
-<h1>Hola <%= @nombre %>!!!</h1>
-<p>Bienvenido a mi blog</p>
 
+<body>
+
+<%= image_tag('banner web 2 desaturno-01.jpg', width: '1300px', height: '400px', class: 'rounded', alt: 'office') %>
+
+</body>
 <<%= link_to "Crear un artículo", new_article_path, class: 'btn btn-primary' %>
-<%= link_to "Listado de articulos",  articles_path %>
+<%= link_to "Listado de articulos",  articles_path, class: 'btn btn-primary' %>
