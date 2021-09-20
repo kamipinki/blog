@@ -3,6 +3,28 @@
 
 <%= image_tag('banner web 2 desaturno-01.jpg', width: '1300px', height: '400px', class: 'rounded', alt: 'office') %>
 
+
+<div class="container">
+      <center><h1>Eventos</h1></center>
+  <div class="row">
+    <div class="col-sm-4">
+    <%= image_tag('evento1.jpg', width: '350px', height: '500px', class: 'rounded', alt: 'office') %>
+      <h3>Mall plaza Calama</h3>
+      <p>Nuestro primer evento en Calama, Son las mejores!</p>
+    </div>
+    <div class="col-sm-4">
+    <%= image_tag('evento2.jpg', width: '350px', height: '500px', class: 'rounded', alt: 'office') %>
+      <h3>Mall plaza Egaña</h3>
+      <p> Nuestra tienda express en santiago <3</p>
+      
+    </div>
+    <div class="col-sm-4">
+    <%= image_tag('evento3.jpg', width: '350px', height: '500px', class: 'rounded', alt: 'office') %>
+      <h3>Mall plaza Antofagasta</h3>        
+      <p>Nuestra tiendita en Antofagasta</p>
+      
+    </div>
+  </div>
 </body>
-<<%= link_to "Crear un artículo", new_article_path, class: 'btn btn-primary' %>
+<%= link_to "Crear un artículo", new_article_path, class: 'btn btn-primary' %>
 <%= link_to "Listado de articulos",  articles_path, class: 'btn btn-primary' %>
