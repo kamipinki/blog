@@ -1,4 +1,4 @@
-
+<%= current_user.email %>
 <body>
 
 <%= image_tag('banner web 2 desaturno-01.jpg', width: '1300px', height: '400px', class: 'rounded', alt: 'office') %>
@@ -28,3 +28,4 @@
 </body>
 <%= link_to "Crear un artículo", new_article_path, class: 'btn btn-primary' %>
 <%= link_to "Listado de articulos",  articles_path, class: 'btn btn-primary' %>
+<%= link_to "Log out",  destroy_user_session_path, method: :delete, data: {confirm:'Seguro quieres salir?'}  %>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
-file_path = Rails.root.join("db", "data.csv")
+file_path = Rails.root.join("db", "data1.csv")
 
 CSV.foreach(file_path, headers: true) do |row|
   article = Article.create!(title: row['title'], text: row['text'])

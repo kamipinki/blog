@@ -1,4 +1,4 @@
-<h2> New artcile </h2>
+<h2> Nuevo articulo  </h2>
 
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
   <% if @article.errors.any? %>
@@ -28,8 +28,21 @@
         <%= form.label :photo, "Texto", class: 'form-label' %>
         <%= form.file_field :photo, direct_upload: true, class: 'form-control' %>
       </div>
-    
-   
+      <div class="mb-3">
+      <%= form.label :photo, "Selecciona la fecha del articulo" %>
+      <%= form_with model: @person do |form| %>
+        <%= form.date_select :Date_today %>
+      <% end %>
+      </div>
+      <div class="mb-3">
+      <%= form.label :photo, "Selecciona el tipo del articulo" %>
+      <%= form.radio_button :tipo, "Aros" %>
+      <%= form.label :type, "Collar" %>
+      <%= form.radio_button :tipo, "Collar" %>
+      <%= form.label :type, "Aros" %>
+      <div class="mb-3">
+      <%= form.label :type, "Precio $" %>
+      <%= form.number_field :price, in: 1.0..10000.0, step: 1 %>
     <p>
       <%= form.submit %>
     </p>
